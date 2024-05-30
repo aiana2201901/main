@@ -26,3 +26,6 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy —only hosting —token "${{ secrets.FIREBASE_TOKEN }}"
+        git add .github/workflows/firebase-deploy.yml
+        git commit -m "Add GitHub Actions workflow for Firebase deploy"
+        git push origin main
